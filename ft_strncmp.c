@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	strncmp(const char *str1, const char *str2, size_t lng)
+int	ft_strncmp(const char *str1, const char *str2, size_t lng)
 {
 	size_t	i;
 
