@@ -20,9 +20,3 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-
-int main(void)
-{
-	printf("%i %i %i %i\n", ft_isalpha('c'), ft_isalpha('1'), ft_isalpha('-'), ft_isalpha('Z'));
-	printf("%i %i %i %i\n", isalpha('c'), isalpha('1'), isalpha('-'), isalpha('Z'));
-}	
