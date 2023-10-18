@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strchr(const char *str, int schar)
+char	*ft_strchr(const char *str, int schar)
 {
 	int	i;
 
