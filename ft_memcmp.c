@@ -6,7 +6,7 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 19:17:50 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/10/19 19:46:07 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/10/19 20:24:18 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,10 @@ int	ft_memcmp(void *p1, void *p2, size_t sze)
 	i = 0;
 	pr1 = p1;
 	pr2 = p2;
-	while ((i < sze) && (pr1[i] || pr2[i]))
+	while (i < sze)
 	{
 		if (pr1[i] != pr2[i])
-		{
-			if (pr1[i] == '\0')
-				return (-1);
-			else if (pr2[i] == '\0')
-				return (1);
-			else
-				return (pr1[i] - pr2[i]);
-		}
+			return (pr1[i] - pr2[i]);
 		i++;
 	}
 	return (0);
@@ -41,8 +34,8 @@ int	ft_memcmp(void *p1, void *p2, size_t sze)
 
 int main(void)
 {
-	char *str1 = "abc";
-	char *str2 = "abcdef";
+	char *str1 = "cv";
+	char *str2 = "cb";
 
-	printf("%d \n %d", ft_memcmp(str1, str2, 3), memcmp(str1, str2, 5));
+	printf("%d \n %d", ft_memcmp(str1, str2, 5), memcmp(str1, str2, 5));
 } 
