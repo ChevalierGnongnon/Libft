@@ -6,13 +6,14 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 16:16:55 by event             #+#    #+#             */
-/*   Updated: 2023/10/24 11:45:17 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/10/24 11:57:59 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stddef.h>
 #include<string.h>
 #include<stdio.h>
+
 size_t	ft_strlen(const char *str)
 {
 	size_t	i;
@@ -31,7 +32,7 @@ char	*ft_strnstr(const char *big, const char *lit, size_t len)
 	i = 0;
 	j = 0;
 	if (lit[0] == '\0')
-		return ((char *)big);
+		return ((char *) big);
 	while (big[i] && i < len)
 	{
 		if (big[i] == lit[0])
@@ -41,8 +42,8 @@ char	*ft_strnstr(const char *big, const char *lit, size_t len)
 		}
 		i++;
 	}
-	if (j == ft_strlen(lit) - 1)
-		return ((char *)&big[len -j]);
+	if (j == ft_strlen(lit))
+		return ((char *) &big[len - j]);
 	else
 		return (NULL);
 }
