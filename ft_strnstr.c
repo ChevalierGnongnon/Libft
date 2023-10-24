@@ -3,46 +3,54 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/21 09:18:23 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/10/22 15:22:29 by chhoflac         ###   ########.fr       */
+/*   Created: 2023/10/23 16:16:55 by event             #+#    #+#             */
+/*   Updated: 2023/10/24 11:45:17 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include<stddef.h>
 #include<string.h>
+#include<stdio.h>
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
 
 char	*ft_strnstr(const char *big, const char *lit, size_t len)
 {
 	size_t	i;
-	size_t	cnt;
 	size_t	j;
 
 	i = 0;
-	cnt = 0;
-	if (lit[0] == '\0' || !lit)
+	j = 0;
+	if (lit[0] == '\0')
 		return ((char *)big);
-	while (lit[i])
+	while (big[i] && i < len)
 	{
-		j = i;
-		while ((big[i + cnt] == lit[0 + cnt]))
+		if (big[i] == lit[0])
 		{
-			cnt++;
+			while (lit[j] && (big[i + j] == lit[j]) && (i + j < len))
+				j++;
 		}
 		i++;
 	}
-	if (cnt == len)
-		return ((char *)&big[i - cnt]);
+	if (j == ft_strlen(lit) - 1)
+		return ((char *)&big[len -j]);
 	else
-		return(NULL);
+		return (NULL);
 }
 
 int main(void)
 {
-	char *str1 = "abcdefcde";
-	char *str2 = "cde";
+	char *str1 = "abcnecdef";
+	char *str2 = "abc";
 	
-	printf("%s", ft_strnstr(str1, str2, 7));
-	//printf("%s", strnstr(str1, str2, 3));
-}
+	printf("%s", ft_strnstr(str1, str2, 9));
+}	
