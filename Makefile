@@ -1,5 +1,4 @@
 ##Variables##
-
 NAME = libft.a
 CC = gcc
 FLAGS = -Werror -Wextra -Wall
@@ -29,11 +28,16 @@ SOURCES:
 	ft_strnstr.c
 	ft_atoi.c
 ##objets##
-
+OBJTS = $(SOURCES:.c=.o)
 ##regles##
 
-all:
-	$(CC) $(FLAGS) -o
+all: $(NAME)
+
+$(NAME): $(OBJTS)
+	ar -rc $@ $^
+%.o:%.c
+	$(CC) $(FLAGS) -I . -o -c %.o %.c
+	# $@ $^
 clean:
 	-rm -f $(OBJTS)
 fclean: clean
