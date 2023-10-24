@@ -6,7 +6,7 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 19:17:50 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/10/19 20:24:18 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/10/24 14:54:09 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,3 @@ int	ft_memcmp(void *p1, void *p2, size_t sze)
 	}
 	return (0);
 }
-
-int main(void)
-{
-	char *str1 = "cv";
-	char *str2 = "cb";
-
-	printf("%d \n %d", ft_memcmp(str1, str2, 5), memcmp(str1, str2, 5));
-} 

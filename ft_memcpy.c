@@ -6,7 +6,7 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:12:16 by event             #+#    #+#             */
-/*   Updated: 2023/10/19 17:25:56 by event            ###   ########.fr       */
+/*   Updated: 2023/10/24 15:08:17 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t sze)
 	}
 	return (dst2);
 }
-
-/*int	main(void)
-{
-	const void *src = "abc";
-	void *dst = malloc(3);
-	char *rdest = (char *) dst;
-	
-	ft_memcpy(dst, src, 3);
-	printf("%s", rdest);
-}*/
