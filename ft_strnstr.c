@@ -13,7 +13,7 @@
 #include<stddef.h>
 #include<string.h>
 #include<stdio.h>
-	
+
 char	*ft_strnstr(const char *big, const char *lit, size_t len)
 {
 	size_t	i;
@@ -22,7 +22,7 @@ char	*ft_strnstr(const char *big, const char *lit, size_t len)
 	i = 0;
 	if (lit[0] == '\0')
 		return ((char *)big);
-	else if (strlen(big) < strlen(lit))
+	else if (ft_strlen(big) < ft_strlen(lit))
 		return (NULL);
 	while (big[i] && i < len)
 	{
