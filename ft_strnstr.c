@@ -35,11 +35,3 @@ char	*ft_strnstr(const char *big, const char *lit, size_t len)
 	}
 	return (NULL);
 }
-
-int main(void)
-{
-	char *str1 = "a";
-	char *str2 = "000";
-	
-	printf("%s", ft_strnstr(str1, str2, 9));
-}	
