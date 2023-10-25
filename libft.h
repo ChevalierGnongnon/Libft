@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	LIBFT.H
+#ifndef	LIBFT_H
 # define LIBFT.H
 #include<stdlib.h>
 
