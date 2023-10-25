@@ -6,12 +6,12 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 07:10:13 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/10/24 15:05:25 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/10/25 15:26:33 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *str, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(str, '\0', n);
+	ft_memset(s, '\0', n);
 	return (str);
 }	

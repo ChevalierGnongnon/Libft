@@ -6,19 +6,19 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 12:28:06 by event             #+#    #+#             */
-/*   Updated: 2023/10/17 12:36:41 by event            ###   ########.fr       */
+/*   Updated: 2023/10/25 15:37:53 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *str, int schar)
+char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
 	i = 0;
-	while (str[i])
+	while (s[i])
 	{
-		if (str[i] == schar)
-			return (&str[i]);
+		if (s[i] == c)
+			return (&s[i]);
 		else
 			i++;
 	}

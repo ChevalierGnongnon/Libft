@@ -6,13 +6,13 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 08:10:46 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/10/20 11:02:02 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/10/25 15:35:21 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
 
-void	*ft_memmove(void *dst, const void *src, size_t sze)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	int			i;
 	const char	*src2;
@@ -20,7 +20,7 @@ void	*ft_memmove(void *dst, const void *src, size_t sze)
 
 	i = -1;
 	src2 = src;
-	dst2 = dst;
+	dst2 = dest;
 	if (dst2 > src2)
 	{
 		i = n;

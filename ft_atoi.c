@@ -6,11 +6,11 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 08:41:16 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/10/18 09:04:04 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/10/25 15:25:00 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *nptr)
 {
 	int	i;
 	int	nb;
@@ -19,18 +19,18 @@ int	ft_atoi(const char *str)
 	i = 0;
 	mult = 1;
 	nb = 0;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\v'
-		|| str[i] == '\n' || str[i] == '\f' || str[i] == '\r')
+	while (nptr[i] == ' ' || nptr[i] == '\t' || nptr[i] == '\v'
+		|| nptr[i] == '\n' || nptr[i] == '\f' || nptr[i] == '\r')
 		i++;
-	while (str[i] == '-' || str[i] == '+')
+	while (nptr[i] == '-' || nptr[i] == '+')
 	{
-		if (str[i] == '-')
+		if (nptr[i] == '-')
 			mult = -1;
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
-		nb = nb * 10 + (str[i] - '0');
+		nb = nb * 10 + (nptr[i] - '0');
 		i++;
 	}
 	return (nb * mult);

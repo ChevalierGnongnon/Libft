@@ -6,20 +6,20 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 06:45:53 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/10/18 06:55:59 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/10/25 15:36:29 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *ptr, int val, size_t count)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t	i;
 	char	str;
 
 	i = 0;
-	str = ptr;
-	while (i < cnt && str[i] != '\0')
+	str = s;
+	while (i < n && str[i] != '\0')
 	{
-		str[i] = val;
+		str[i] = c;
 		i++;
 	}
 	return (str);

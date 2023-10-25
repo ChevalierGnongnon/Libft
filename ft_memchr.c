@@ -6,21 +6,21 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 09:22:38 by event             #+#    #+#             */
-/*   Updated: 2023/10/18 10:33:46 by event            ###   ########.fr       */
+/*   Updated: 2023/10/25 15:30:57 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memchr(const void *mblock, int schar, size_t sze)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	int		i;
 	char	*str;
 
 	i = 0;
-	str = nblock;
-	while (i < sze)
+	str = s;
+	while (i < n)
 	{
-		if (str[i] == schar)
-			return (&str[i]);
+		if (str[i] == c)
+			return (str[i]);
 		else
 			i++;
 	}
