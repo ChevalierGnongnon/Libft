@@ -6,33 +6,48 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 08:10:46 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/10/25 15:35:21 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/10/28 11:59:58 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<unistd.h>
+#include<stddef.h>
+#include<string.h>
+#include<stdio.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	int			i;
-	const char	*src2;
-	char		*dst2;
+	char	*d2;
+	const char	*s2;
+	size_t	i;
 
-	i = -1;
-	src2 = src;
-	dst2 = dest;
-	if (dst2 > src2)
+	d2 = dest;
+	s2 = src;
+	i = 0;
+	if (dest > src)
 	{
-		i = n;
-		while (--i > 0)
-			dst2[i] == src2[i];
+		while (n > 0)
+		{
+			d2[n] = s2[n];
+			n--;
+		}
 	}
-	else if (dst2 < src2)
+	else
 	{
-		while (++i < n)
-			dst2[i] = src2[i];
+		while (i < n)
+		{
+			d2[i] = s2[i];
+			i++;
+		}
 	}
-	else if (dst2 == src2)
-		return (dst2);
-	return (dst2);
+	return (dest);
+}
+int main(void)
+{
+	char dest[5];
+	const char src[5]= {'1','2', '3','4', '5'};
+	
+	//ft_memmove(dest, src, 5);
+	memmove (dest, src, 5);
+	printf("%s", dest);
+	
 }
