@@ -6,7 +6,7 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 12:02:30 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/01 15:59:21 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/01 16:30:53 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 int main(void)
 {
 	char	*str1 = "abcdef";
-	char	*sub = ft_substr(str1, INT_MAX, 12);
+	char	*sub = ft_substr(str1, INT_MAX, INT_MAX);
 	printf("%s", sub);
 }
