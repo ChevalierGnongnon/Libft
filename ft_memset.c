@@ -6,14 +6,16 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 06:45:53 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/10/25 15:36:29 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/02 14:45:57 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stddef.h>
 
 void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t	i;
-	char	str;
+	char	*str;
 
 	i = 0;
 	str = s;

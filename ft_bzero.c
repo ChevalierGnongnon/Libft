@@ -6,9 +6,11 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 07:10:13 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/10/25 15:26:33 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/02 14:47:17 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include<stddef.h>
 
 void	ft_bzero(void *s, size_t n)
 {
