@@ -6,10 +6,12 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 13:36:52 by event             #+#    #+#             */
-/*   Updated: 2023/10/17 13:48:57 by event            ###   ########.fr       */
+/*   Updated: 2023/11/02 15:17:26 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
+#include "libft.h"
 int	ft_strncmp(const char *str1, const char *str2, size_t lng)
 {
 	size_t	i;
@@ -17,7 +19,7 @@ int	ft_strncmp(const char *str1, const char *str2, size_t lng)
 	i = 0;
 	while ((i < lng) && (str1[i] || str2[i]))
 	{
-		if (str1[i] ! str2[i])
+		if (str1[i] != str2[i])
 		{
 			if (str1[i] == '\0')
 				return (-1);

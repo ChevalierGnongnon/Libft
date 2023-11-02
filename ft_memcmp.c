@@ -6,23 +6,25 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 19:17:50 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/10/25 15:32:33 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/02 15:25:51 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
 #include<stdio.h>
 #include<string.h>
+#include<stddef.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t	i;
-	char	*pr1;
-	char	*pr2;
+	const char	*pr1;
+	const char	*pr2;
 
 	i = 0;
-	pr1 = p1;
-	pr2 = p2;
+	pr1 = s1;
+	pr2 = s2;
 	while (i < n)
 	{
 		if (pr1[i] != pr2[i])

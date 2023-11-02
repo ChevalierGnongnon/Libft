@@ -6,19 +6,22 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 12:28:06 by event             #+#    #+#             */
-/*   Updated: 2023/10/25 15:37:53 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/02 15:11:28 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include<stddef.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
 	int	i;
-
+	
 	i = 0;
 	while (s[i])
 	{
 		if (s[i] == c)
-			return (&s[i]);
+			return ((char *)&s[i]);
 		else
 			i++;
 	}
