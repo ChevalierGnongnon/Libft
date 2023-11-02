@@ -6,7 +6,7 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 09:26:54 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/02 10:46:09 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/02 10:44:08 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char *ft_strjoin(char const *s1, char const *s2)
 	s3 = (char *) malloc(cs1 + cs2 +1);
 	if (!s3)
 		return (NULL);
-	while (i < (cs1 + cs2) / 2)
+	while (i < j)
 	{
 		s3[i] = s1[i];
 		s3[cs1 + j] = s2[j];
