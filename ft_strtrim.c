@@ -6,7 +6,7 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 08:50:53 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/03 14:01:58 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/03 16:08:42 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,17 @@ static size_t	ft_gostart(const char *s, const char *set)
 //Meme chose mais a l envers 
 static size_t	ft_goend(char *s)
 {
-
+	int	check;
+	size_t	i;
+	
+	check = 1;
+	i = ft_strlen(s);
+	while ((check == 1) && (i > 0))
+	{
+		check = ft_checkChar(set, s[i]);
+		i--;
+	}
+	return(i);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
