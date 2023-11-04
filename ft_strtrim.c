@@ -6,63 +6,43 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 08:50:53 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/03 16:08:42 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/05 00:57:59 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//Pour check si dans s1[i] il y a une des lettres de set, 1 si oui 0 si non 
-static int	ft_checkChar(const char *set, char c)
-{
-	int	i;
-
-	i = 0;
-	while (set[i])
-	{
-		if (set[i] == c)
-			return (1);
-		i++;
-	}
-	return (0);			 
-}
-
-//Pour aller jusquve la fin de la partie a trim au debut
-static size_t	ft_gostart(const char *s, const char *set)
-{
-	int	check;
-	size_t	i;
-
-	check = 1;
-	i = 0;
-	while ((s[i]) && (check == 1))
-	{
-		check = ft_checkChar(set, s[i]);
-		i++;
-	}
-	return (i);
-}
-
-//Meme chose mais a l envers 
-static size_t	ft_goend(char *s)
-{
-	int	check;
-	size_t	i;
-	
-	check = 1;
-	i = ft_strlen(s);
-	while ((check == 1) && (i > 0))
-	{
-		check = ft_checkChar(set, s[i]);
-		i--;
-	}
-	return(i);
-}
+#include<stddef.h>
+#include "ft_substr.c" 
+#include "ft_strchr.c"
+#include "ft_strrchr.c"
+#include "ft_strlen.c"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
+	int	i;
+	int	j;
 	char	*trim;
-	size_t	j;
-	size_t	k;
-
-	j = 0;
-	while (s1[i] && check == 1)
+	
+	i = 0;
+	j = ft_strlen(s1) - 1;
+	if (!s1)
+		return (NULL);
+	while (s1[i] && ft_strchr(set, s1[i]))
+	{
+		printf("ok");
+		i++;
+	}
+	while (j > i && ft_strchr(set, s1[j]))
+	{
+		j--;
+		printf("%d", j);
+	}
+	trim = ft_substr(s1, i, j + 1);
+	return(trim);
 }	
+int main(void)
+{
+	const char *s = "aacaaabonjouraacaa";
+	const char *set = "ac";
+	char *trim = ft_strtrim(s, set);
+	printf("%s", trim);
+}
