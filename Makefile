@@ -24,6 +24,7 @@ SOURCES = ft_isalpha.c \
 	ft_memchr.c \
 	ft_memcmp.c \
 	ft_strnstr.c \
+	ft_substr.c \
 	ft_atoi.c 
 ##objets##
 OBJTS = $(SOURCES:.c=.o)
@@ -32,12 +33,12 @@ OBJTS = $(SOURCES:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJTS)
-	ar -rc $@ $^
+	ar rcs $@ $^
 $(OBJTS): $(SOURCES)
 	$(CC) $(FLAGS) $(SOURCES)
-	# $@ $^
+	#$@ $^
 clean:
-	-rm -f $(OBJTS)
+	rm -f $(OBJTS)
 fclean: clean
 	rm -f $(NAME) 
 re:
