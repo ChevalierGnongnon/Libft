@@ -6,7 +6,7 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 12:02:30 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/06 11:17:02 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/06 12:43:41 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <string.h>
 #include <limits.h>
 #include "ft_calloc.c"
+#include "ft_strlen.c"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -30,9 +31,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	else if (ft_strlen(s) > len)
 		sub = ft_calloc(len + 1, 1);
 	else
-		sub = ft_calloc(ft_strlen(s) + 1, 1)
+		sub = ft_calloc(ft_strlen(s) + 1, 1);
 	if (!sub)
-		return (null);
+		return (NULL);
 	while(i < len && s[start + i])
 	{
 		sub[i] = s[start + i];
