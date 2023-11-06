@@ -6,7 +6,7 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 12:02:30 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/02 13:19:42 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/06 11:17:02 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,30 @@
 #include <stdio.h>
 #include <string.h>
 #include <limits.h>
+#include "ft_calloc.c"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
 	char	*sub;
-
+	size_t	i;
+	
 	i = 0;
-	sub = (char *) malloc(len + 1);
-	if (!sub)
-		return (NULL);
-	if (strlen(s) > start)
+	if (len == 0 || ft_strlen(s) <= start)
 	{
-		while (i < len && s[i])
-		{
-			sub[i] = s[start + i];
-			i++;
-		}
+		sub = ft_calloc(1, 1);
+		return (sub);
+	}
+	else if (ft_strlen(s) > len)
+		sub = ft_calloc(len + 1, 1);
+	else
+		sub = ft_calloc(ft_strlen(s) + 1, 1)
+	if (!sub)
+		return (null);
+	while(i < len && s[start + i])
+	{
+		sub[i] = s[start + i];
+		i++;
 	}
 	sub[i] = '\0';
-	return (sub);
+	return (sub);	
 }
-/*int main(void)
-{
-	char	*str1 = "abcdef";
-	char	*sub = ft_substr(str1, INT_MAX, INT_MAX);
-	printf("%s", sub);
-}*/
