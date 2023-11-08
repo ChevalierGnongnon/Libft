@@ -6,7 +6,7 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 13:05:44 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/07 10:39:31 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/07 15:20:25 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,30 +43,34 @@ char	*ft_itoa(int n)
 {
 	char	*str;
 	int	i;
+//	int	mult;
 	
 	str = ft_alloc(n);
 	i = 0;
+//	mult = 10;
 	if (!str)
 		return (NULL);
 	if(n < 0)
 	{
 		n *= -1;
 		str[0] = '-';
-		i++;
 	}
-	i = ft_getsize(n); 
-	while(n != 0)
+	i = ft_getsize(n + 1);
+	printf("before loop : i : %d n : %d\n", i, n); 
+	while(i > 0 && n > 0)
 	{
-		str[i - 1] = n + 48;
+		printf("i : %d n : %d \n", i, n);
+		str[i] = (n % 10) + 48;
 		n /= 10;
 		i--;
 	}
-	return (str);		
+	str[ft_getsize(n) + 1] = '\0';
+	return (str);
 }
 
 int main(void)
 {
-	int a = 123;
+	int a = -123;
 	char *str = ft_itoa(a);
 	printf("%s", str);
 }
