@@ -10,10 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stddef.h>
-#include<stdlib.h>
-#include<strings.h>
-#include<stdio.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
@@ -22,6 +19,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ptr = (void *) malloc(nmemb * size);
 	if (ptr == NULL)
 		return (NULL);
-	bzero(ptr, nmemb * size);
+	ft_bzero(ptr, nmemb * size);
 	return (ptr);
 }
