@@ -6,7 +6,7 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 08:10:46 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/10/28 13:47:24 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/09 13:27:15 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,14 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			i++;
 		}
 	}
+	dest = d2;
 	return (dest);
 }
+
+int main(void)
+{
+	char *src = "abcdef";
+	char *dst = "";
+	
+	ft_memmove(dst, src, 3);
+}		
