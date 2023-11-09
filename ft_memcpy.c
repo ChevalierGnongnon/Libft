@@ -6,7 +6,7 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:12:16 by event             #+#    #+#             */
-/*   Updated: 2023/11/09 12:44:23 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/09 12:50:34 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	src2 = src;
 	i = 0;
 	if (!dest && !src)
-		return(NULL); 
+		return (NULL);
 	while (i < n)
 	{
 		dst2[i] = src2[i];
