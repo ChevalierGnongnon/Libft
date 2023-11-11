@@ -6,7 +6,7 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 13:05:44 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/08 15:35:44 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/11 13:51:56 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,23 +47,25 @@ static char	*ft_alloc(int n)
 
 char	*ft_itoa(int n)
 {
-	char	*str;
+	char		*str;
 	int		i;
+	long long	castn;
 
-	str = ft_alloc(n);
-	i = ft_getsize(n) - 1;
+	castn = (long long) n;
+	str = ft_alloc(castn);
+	i = ft_getsize(castn) - 1;
 	if (!str)
 		return (NULL);
-	if (n < 0)
+	if (castn < 0)
 	{
 		str[0] = '-';
-		n *= -1;
+		castn *= -1;
 	}
 	str[i + 1] = '\0';
-	while (i >= 0 && n > 0)
+	while (i >= 0 && castn > 0)
 	{
-		str[i] = (n % 10) + '0';
-		n /= 10;
+		str[i] = (castn % 10) + '0';
+		castn /= 10;
 		i--;
 	}
 	return (str);
