@@ -6,7 +6,7 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 19:17:50 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/08 15:06:32 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/12 14:24:42 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (i < n)
 	{
 		if (pr1[i] != pr2[i])
-			return (pr1[i] - pr2[i]);
+			return ((unsigned char)pr1[i] - (unsigned char)pr2[i]);
 		i++;
 	}
 	return (0);

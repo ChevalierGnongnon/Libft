@@ -6,7 +6,7 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 08:10:46 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/11 17:17:25 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/12 14:08:04 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,35 +16,23 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char		*d2;
-	const char	*s2;
-	size_t		i;
-	size_t		temp;
+	unsigned char	*d2;
+	unsigned char	*s2;
+	size_t			i;
 
-	temp = n;
-	d2 = (char *) dest;
-	s2 = (char *) src;
 	i = 0;
-	if (dest > src)
-		while (n > 0)
-		{
-			d2[n] = s2[n];
-			n--;
-		}
-	else
-		while (i < temp)
-		{
+	d2 = (unsigned char *) dest;
+	s2 = (unsigned char *) src;
+	if (!dest && !src)
+		return (dest);
+	while (i < n)
+	{
+		if (d2 > s2)
+			d2[n - i - 1] = s2[n - i - 1];
+		else
 			d2[i] = s2[i];
-			i++;
-		}
-	return (d2);
+		i++;
+	}
+	dest = d2;
+	return (dest);
 }
-
-int main(void)
-{
-	char *dest = "   ";
-	const char *src = "abc";
-
-	printf("%s", (char *) ft_memmove(dest, src, 2));
-}
-

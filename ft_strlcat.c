@@ -6,7 +6,7 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 07:05:51 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/11 16:01:36 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/12 14:32:11 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 	i = ft_strlen(dst);
 	j = 0;
-	if (size  <= ft_strlen(dst) || size == 0)
+	if (size <= ft_strlen(dst) || size == 0)
 		return (size + ft_strlen(src));
 	while ((src[j] != '\0') && ((i + 1) < size))
 	{
