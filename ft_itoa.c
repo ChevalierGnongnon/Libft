@@ -6,20 +6,18 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 13:05:44 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/11 13:51:56 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/12 11:05:41 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stddef.h>
-// #include <stdio.h>
-// #include <stdlib.h>
-// #include <limits.h>
 #include "libft.h"
 
-static int	ft_getsize(int n)
+static int	ft_getsize(long long n)
 {
 	size_t	j;
-
+	
+	if (n == 0)
+		return (1);
 	j = 0;
 	if (n < 0)
 	{
@@ -34,14 +32,14 @@ static int	ft_getsize(int n)
 	return (j);
 }
 
-static char	*ft_alloc(int n)
+static char	*ft_alloc(long long n)
 {
 	char	*s;
 
 	if (n >= 0)
-		s = (char *) ft_calloc(ft_getsize(n) + 1, 1);
+		s = (char *) ft_calloc((size_t) ft_getsize(n) + 1, 1);
 	else
-		s = (char *) ft_calloc(ft_getsize(n) + 2, 1);
+		s = (char *) ft_calloc((size_t) ft_getsize(n) + 2, 1);
 	return (s);
 }
 
