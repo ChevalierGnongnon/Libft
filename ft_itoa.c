@@ -6,7 +6,7 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 13:05:44 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/12 11:05:41 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/12 15:46:50 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ static int	ft_getsize(long long n)
 	j = 0;
 	if (n < 0)
 	{
-		j++;
 		n *= -1;
+		j++;
 	}
 	while (n != 0)
 	{
@@ -32,17 +32,6 @@ static int	ft_getsize(long long n)
 	return (j);
 }
 
-static char	*ft_alloc(long long n)
-{
-	char	*s;
-
-	if (n >= 0)
-		s = (char *) ft_calloc((size_t) ft_getsize(n) + 1, 1);
-	else
-		s = (char *) ft_calloc((size_t) ft_getsize(n) + 2, 1);
-	return (s);
-}
-
 char	*ft_itoa(int n)
 {
 	char		*str;
@@ -50,7 +39,7 @@ char	*ft_itoa(int n)
 	long long	castn;
 
 	castn = (long long) n;
-	str = ft_alloc(castn);
+	str = ft_calloc(ft_getsize(castn) + 1, sizeof(char));
 	i = ft_getsize(castn) - 1;
 	if (!str)
 		return (NULL);
@@ -60,11 +49,12 @@ char	*ft_itoa(int n)
 		castn *= -1;
 	}
 	str[i + 1] = '\0';
-	while (i >= 0 && castn > 0)
+	if (castn == 0)
+		str[i] = '0';
+	while (castn)
 	{
-		str[i] = (castn % 10) + '0';
+		str[i--] = (castn % 10) + '0';
 		castn /= 10;
-		i--;
 	}
 	return (str);
 }
