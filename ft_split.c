@@ -6,7 +6,7 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 07:53:57 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/13 11:58:18 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/13 13:39:13 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,20 @@ size_t	ft_count(const char *s, char c)
 	return(cnt);
 }
 
-/*char	**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
+	char	**str;
+	int	i;
 
-}*/
+	str = ft_calloc(ft_count(s, c) + 1, sizeof(char));
+	i = 0;
+	while (str[i])
+}
+
 int main(void)
 {
 	size_t	cnt;
-	const char	s[] = "abc         def      ";
+	const char	s[] = "     abc         def      ";
 
 	cnt = ft_count(s, ' ');
 	printf("%ld", cnt);
