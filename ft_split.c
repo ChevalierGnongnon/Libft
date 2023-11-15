@@ -6,7 +6,7 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 07:53:57 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/13 15:45:25 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/15 10:24:53 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,21 @@ static size_t	ft_count(const char *s, char c)
 	return(cnt);
 }
 
+static char	*ft_duplicate(char *s)
+{
+
+}
+
+static void	ft_free()
+{
+
+}
 char	**ft_split(char const *s, char c)
 {
-	char	**str;
 	size_t	i;
-
-	str = ft_calloc(sizeof(char *), ft_count(s, c) + 1);
+	char	**arr;
+	
 	i = 0;
-	while (str[i])
-	{
-		
-	}
-	return (str);
+	arr = ft_calloc(ft_count(s, c), sizeof(char));
+	return (arr);
 }
