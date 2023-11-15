@@ -6,7 +6,7 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 07:53:57 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/15 10:47:01 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/15 17:25:01 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,32 +29,56 @@ static size_t	ft_count(const char *s, char c)
 	return(cnt);
 }
 
-static char	*ft_duplicate(char *s, int start, int end)
+static size_t	ft_getsub(char const *s, int c, int start)
 {
-	char *sub;
-	size_t	i;
+	size_t	key;
 	
-	i = 0;
-	sub = ft_calloc(end - start), sizeof(char));
-	while (i < end)
-	{
-		sub[i] = s[start + i];
-		i++; 
-	}
-	sub[i] = '\0';
-	return(sub);
+	key = start;
+	while (s[key] != c && s[key])
+		key++;
+	return (key);
 }
 
-static void	ft_free()
+static char	**ft_clean(char **tab, size_t pos)
 {
+	int pos2;
 
-}
+	pos2 = (int)pos;
+	while(pos2 >= 0)
+	{
+		free(tab[pos2]);
+		pos2--;
+	}
+	free(tab);
+	return (NULL);
+} 
+
 char	**ft_split(char const *s, char c)
 {
 	size_t	i;
-	char	**arr;
-	
+	size_t	j;
+	size_t	k;
+	char	**tab;
+
 	i = 0;
-	arr = ft_calloc(ft_count(s, c), sizeof(char));
-	return (arr);
+	j = 0;
+	k = 0;
+	tab = ft_calloc(ft_count(s, c) + 1, sizeof(char *));
+	if (!tab)
+		return (NULL);
+	while (s[i])
+	{
+		if (s[i] == c)
+			i++;
+		else if (s[i] != c)
+		{
+			j = ft_getsub(s, c, i);
+			tab[k] = ft_substr(s, i, j - i);
+			if (!tab[k])
+				return (ft_clean(tab, k - 1));
+			i = j;
+			k++;
+		}
+	}
+	return (tab);
 }
