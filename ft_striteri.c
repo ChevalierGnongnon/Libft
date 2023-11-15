@@ -6,19 +6,18 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 15:29:13 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/13 15:48:05 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/15 08:18:14 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-void ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
 
 	i = 0;
-	if(!s || !f)
+	if (!s || !f)
 		return ;
-	while(s[i])
+	while (s[i])
 	{
 		f(i, (s + i));
 		i++;

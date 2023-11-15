@@ -6,7 +6,7 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 15:14:36 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/13 16:03:34 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/15 08:11:33 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
-	char		len;
-	char		*str;
+	char			len;
+	char			*str;
 
-	if(!s || !f)
+	if (!s || !f)
 		return (NULL);
 	i = 0;
 	len = ft_strlen(s);
@@ -33,4 +33,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-

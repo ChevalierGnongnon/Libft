@@ -6,7 +6,7 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 13:05:44 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/12 15:46:50 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/15 08:16:06 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	ft_getsize(long long n)
 {
 	size_t	j;
-	
+
 	if (n == 0)
 		return (1);
 	j = 0;
@@ -35,7 +35,7 @@ static int	ft_getsize(long long n)
 char	*ft_itoa(int n)
 {
 	char		*str;
-	int		i;
+	int			i;
 	long long	castn;
 
 	castn = (long long) n;
