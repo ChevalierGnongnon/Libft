@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:38:22 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/17 09:13:15 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/17 09:50:46 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ typedef struct	s_list
 {
 	void		*content;
 	struct s_list	*next;
-			t_list;
-}
+}	t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

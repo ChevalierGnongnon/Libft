@@ -31,7 +31,7 @@ SRCS = 	ft_atoi.c \
 		ft_putnbr_fd.c \
 		ft_split.c \
 		ft_striteri.c \
-		ft_strmapi.c 		
+		ft_strmapi.c  		
 
 
 OBJS = $(SRCS:.c=.o)
@@ -74,8 +74,8 @@ mini: all clean
 
 re: fclean all
 
-#bonus: $(OBJS) $(BONUS_OBJS)
-	#ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+bonus: $(OBJS) $(BONUS_OBJS)
+	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 rebonus: fclean bonus
 
