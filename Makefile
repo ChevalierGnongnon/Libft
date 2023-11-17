@@ -43,8 +43,8 @@ RM = rm -f
 CFLAGS =  -Wall -Wextra -Werror
 
 BONUS			=	ft_lstnew.c\
+				ft_lstadd_front.c
 					#ft_lstadd_back_bonus.c \
-					ft_lstadd_front_bonus.c \
 					ft_lstclear_bonus.c \
 					ft_lstdelone_bonus.c \
 					ft_lstiter_bonus.c \
