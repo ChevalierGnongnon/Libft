@@ -6,13 +6,10 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 16:16:55 by event             #+#    #+#             */
-/*   Updated: 2023/11/02 15:26:52 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/18 16:21:29 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stddef.h>
-#include<string.h>
-#include<stdio.h>
 #include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *lit, size_t len)

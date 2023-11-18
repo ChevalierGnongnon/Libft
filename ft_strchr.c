@@ -6,11 +6,10 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 12:28:06 by event             #+#    #+#             */
-/*   Updated: 2023/11/12 10:48:15 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/18 16:12:46 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stddef.h>
 #include "libft.h"
 
 char	*ft_strchr(const char *s, int c)

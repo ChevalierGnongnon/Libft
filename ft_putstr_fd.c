@@ -6,12 +6,11 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 16:06:25 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/12 16:11:17 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/18 16:11:08 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stddef.h>
-#include<unistd.h>
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

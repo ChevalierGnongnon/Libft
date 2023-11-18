@@ -6,11 +6,10 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 07:10:13 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/02 15:05:10 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/18 15:51:00 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stddef.h>
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)

@@ -6,11 +6,10 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 08:50:53 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/08 15:08:09 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/18 16:24:02 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stddef.h>
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)

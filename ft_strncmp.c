@@ -6,11 +6,10 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 13:36:52 by event             #+#    #+#             */
-/*   Updated: 2023/11/12 14:21:53 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/18 16:21:58 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 int	ft_strncmp(const char *str1, const char *str2, size_t lng)

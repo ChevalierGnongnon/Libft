@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:38:22 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/18 15:16:18 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/18 16:08:46 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include<stdio.h>
 # include <string.h>
 # include <limits.h>
+# include <unistd.h>
 
 typedef struct s_list
 {

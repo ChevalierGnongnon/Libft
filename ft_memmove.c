@@ -6,12 +6,10 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 08:10:46 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/12 14:08:04 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/18 16:05:09 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stddef.h>
-#include <stdio.h>
 #include"libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)

@@ -6,11 +6,11 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 08:41:16 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/11 13:59:59 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/18 15:50:10 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include "libft.h"
 
 static int	ft_pass_empty(const char *nptr)
 {
