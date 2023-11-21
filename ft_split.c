@@ -6,7 +6,7 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 07:53:57 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/16 09:58:23 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/21 14:32:43 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,10 +61,9 @@ char	**ft_split(char const *s, char c)
 	char	**tab;
 
 	i = 0;
-	j = 0;
 	k = -1;
 	tab = ft_calloc(ft_count(s, c) + 1, sizeof(char *));
-	if (!tab)
+	if (!tab || !s)
 		return (NULL);
 	while (s[i])
 	{

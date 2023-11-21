@@ -6,7 +6,7 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 08:50:53 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/18 16:24:02 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/21 14:41:48 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	i = 0;
 	j = ft_strlen(s1) - 1;
-	if (!s1)
+	if (!s1 || !set)
 		return (NULL);
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
