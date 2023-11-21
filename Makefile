@@ -46,11 +46,7 @@ BONUS			=	ft_lstnew.c \
 				ft_lstadd_front.c \
 				ft_lstsize.c \
 				ft_lstlast.c \
-				ft_lstadd_back.c \
-					#ft_lstclear_bonus.c \
-					ft_lstdelone_bonus.c \
-					ft_lstiter_bonus.c \
-					ft_lstmap_bonus.c \
+				ft_lstadd_back.c  
 
 BONUS_OBJS		= $(BONUS:.c=.o)
 
