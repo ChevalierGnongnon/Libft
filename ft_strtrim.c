@@ -6,7 +6,7 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 08:50:53 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/21 14:41:48 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/23 22:36:00 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 	while (j > i && ft_strchr(set, s1[j]))
 		j--;
-	trim = ft_substr(s1, i, (j - i) + 1);
+	trim = ft_substr(s1, i, (j - i + 1));
 	return (trim);
 }

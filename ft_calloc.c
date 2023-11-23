@@ -6,7 +6,7 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 08:11:12 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/10/30 13:02:50 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/23 22:34:17 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 
+	if (nmemb * size == INT_MAX)
+		return (NULL);
 	ptr = (void *) malloc(nmemb * size);
 	if (ptr == NULL)
 		return (NULL);

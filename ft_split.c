@@ -6,7 +6,7 @@
 /*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 07:53:57 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/21 14:32:43 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/23 22:14:02 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ static size_t	ft_count(const char *s, char c)
 	size_t	i;
 	size_t	cnt;
 
+	if (!s)
+		return ((size_t) NULL);
 	cnt = 0;
 	i = 0;
 	while (s[i])
@@ -39,15 +41,15 @@ static size_t	ft_getsub(char const *s, int c, int start)
 	return (key);
 }
 
-static char	**ft_clean(char **tab, size_t pos)
+static char	**ft_clean(char **tab)
 {
-	int	pos2;
+	size_t	i;
 
-	pos2 = (int)pos;
-	while (pos2 >= 0)
+	i = 0;
+	while (tab[i])
 	{
-		free(tab[pos2]);
-		pos2--;
+		free(tab[i]);
+		i++;
 	}
 	free(tab);
 	return (NULL);
@@ -63,7 +65,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	k = -1;
 	tab = ft_calloc(ft_count(s, c) + 1, sizeof(char *));
-	if (!tab || !s)
+	if (!tab)
 		return (NULL);
 	while (s[i])
 	{
@@ -74,7 +76,7 @@ char	**ft_split(char const *s, char c)
 			j = ft_getsub(s, c, i);
 			tab[++k] = ft_substr(s, i, j - i);
 			if (!tab[k])
-				return (ft_clean(tab, k - 1));
+				return (ft_clean(tab));
 			i = j;
 		}
 	}
