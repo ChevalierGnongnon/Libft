@@ -6,7 +6,7 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 12:43:42 by event             #+#    #+#             */
-/*   Updated: 2023/11/11 18:54:55 by chhoflac         ###   ########.fr       */
+/*   Updated: 2023/11/23 17:22:09 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 	{
 		if (s[j] == (char) c)
 			return ((char *) &s[j]);
-		else
-			j--;
+		j--;
 	}
 	return (NULL);
 }	

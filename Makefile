@@ -40,15 +40,7 @@ NAME = libft.a
 
 RM = rm -f
 
-CFLAGS =  -Wall -Wextra -Werror
-
-BONUS			=	ft_lstnew.c \
-				ft_lstadd_front.c \
-				ft_lstsize.c \
-				ft_lstlast.c \
-				ft_lstadd_back.c  
-
-BONUS_OBJS		= $(BONUS:.c=.o)
+CFLAGS =  -Wall -Wextra -Werror 
 
 PARASITE = a.out
 
@@ -61,21 +53,14 @@ $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 clean: 
-	$(RM) $(OBJS) $(BONUS_OBJS)
+	$(RM) $(OBJS) 
 
 fclean: clean 
 	$(RM) $(NAME) $(PARASITE)
 
-mini: all clean
-
 re: fclean all
-
-bonus: $(OBJS) $(BONUS_OBJS)
-	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
-
-rebonus: fclean bonus
 
 main: 
 	gcc $(CFLAGS) main.c $(NAME)
 
-.PHONY: all clean fclean re bonus rebonus
+.PHONY: all clean fclean re
