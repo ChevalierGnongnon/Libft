@@ -44,8 +44,8 @@ CFLAGS =  -Wall -Wextra -Werror
 
 PARASITE = a.out
 
-.c.o: 
-	gcc $(CFLAGS) -c $< -o ${<:.c=.o}
+.c.o: 	
+	cc $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 
@@ -61,6 +61,6 @@ fclean: clean
 re: fclean all
 
 main: 
-	gcc $(CFLAGS) main.c $(NAME)
+	cc $(CFLAGS) main.c $(NAME)
 
 .PHONY: all clean fclean re
