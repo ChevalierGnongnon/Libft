@@ -3,20 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chhoflac <chhoflac@42.fr>                  +#+  +:+       +#+        */
+/*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:38:22 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/23 17:15:16 by chhoflac         ###   ########.fr       */
+/*   Updated: 2024/01/31 14:25:05 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 5
+# endif
 # include <stdlib.h>
 # include <stddef.h>
 # include <limits.h>
 # include <unistd.h>
+# include <stdarg.h> 
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -52,5 +55,30 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_bzero(void *s, size_t n);
 size_t	ft_strlen(const char *str);
+size_t	ft_str_stop(char *s, char c);
+void	ft_push_left(char *cont);
+int		ft_oldline(char **line, size_t nbchar);
+int		ft_fill(char *buff, char **line, size_t nbchar);
+char	*get_next_line(int fd);
+int		ft_char(char c);
+int		ft_decimal(int n);
+int		ft_getsize(int n);
+int		ft_getusize2(unsigned int n);
+int		ft_hexaup(unsigned int n);
+int		ft_hexalow(unsigned int n);
+int		ft_getlsize(unsigned long long add);
+int		ft_hexa_add(unsigned long long add);
+int		ft_pointer(unsigned long long add);
+int		ft_get_format(const char *s, size_t i, va_list args);
+int		ft_printf(const char *s, ...);
+int		ft_string(char *s);
+void	ft_putnbr_unsigned(unsigned int n);
+int		ft_getusize(unsigned int n);
+int		ft_unsigned(unsigned int n);
+int		ft_hexa_up(unsigned int n);
+int		ft_hexa_low(unsigned int n);
+void	ft_push_left(char *cont);
+int		ft_old_line(char **line, size_t nbchar);
+int		ft_fill(char *buff, char **line, size_t nbchar);
 
 #endif

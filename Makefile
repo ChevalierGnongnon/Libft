@@ -1,4 +1,4 @@
-SRCS = 	ft_atoi.c \
+LIBFT = ft_atoi.c \
 		ft_bzero.c \
 		ft_calloc.c \
 		ft_isalnum.c \
@@ -31,36 +31,51 @@ SRCS = 	ft_atoi.c \
 		ft_putnbr_fd.c \
 		ft_split.c \
 		ft_striteri.c \
-		ft_strmapi.c  		
+		ft_strmapi.c 
+		
+GNL = get_next_line_utils.c \
+	get_next_line.c 
 
+PRINTF = ft_unsigned.c \
+		 ft_char.c \
+		 ft_decimal.c \
+		 ft_getsize.c \
+		 ft_hexa.c \
+		 ft_pointer.c \
+		 ft_printf.c \
+		 ft_string.c \
+		 ft_unsigned.c 
 
-OBJS = $(SRCS:.c=.o)
+CC = cc
+
+OBJSLIBFT = $(LIBFT:.c=.o)
+
+OBJSGNL = $(GNL:.c=.o)
+
+OBJSPRINTF = $(PRINTF:.c=.o)
 
 NAME = libft.a
 
 RM = rm -f
 
-CFLAGS =  -Wall -Wextra -Werror 
+%o : %c
+	$(CC) $(CFLAGS) $(OBJSLIBFT)
+	$(CC) $(CFLAGS) $(OBJSGNL)
+	$(CC) $(CFLAGS) $(OBJSPRINTF)
 
-PARASITE = a.out
+all : $(NAME)
 
-.c.o: 	
-	cc $(CFLAGS) -c $< -o $@
+$(NAME) : $(OBJSGNL) $(OBJSLIBFT) $(OBJSPRINTF)
+		ar rcs $(NAME) $(OBJSGNL) $(OBJSLIBFT) $(OBJSPRINTF)
 
-all: $(NAME)
+clean : 
+	$(RM) $(OBJSGNL) 
+	$(RM) $(OBJSLIBFT) 
+	$(RM) $(OBJSPRINTF)
 
-$(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+fclean : clean
+	$(RM) $(NAME)
 
-clean: 
-	$(RM) $(OBJS) 
+re : fclean all
 
-fclean: clean 
-	$(RM) $(NAME) $(PARASITE)
-
-re: fclean all
-
-main: 
-	cc $(CFLAGS) main.c $(NAME)
-
-.PHONY: all clean fclean re
+.PHONY : all clean fclean re

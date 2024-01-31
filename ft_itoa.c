@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 13:05:44 by chhoflac          #+#    #+#             */
-/*   Updated: 2023/11/23 22:25:58 by chhoflac         ###   ########.fr       */
+/*   Updated: 2024/01/31 14:03:31 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_getsize(long long n)
+static int	ft_getllsize(long long n)
 {
 	size_t	j;
 
@@ -39,7 +39,7 @@ char	*ft_itoa(int n)
 	long long	castn;
 
 	castn = (long long) n;
-	str = ft_calloc(ft_getsize(castn) + 1, sizeof(char));
+	str = ft_calloc(ft_getllsize(castn) + 1, sizeof(char));
 	i = ft_getsize(castn) - 1;
 	if (!str)
 		return (NULL);
