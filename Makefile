@@ -31,7 +31,16 @@ LIBFT = ft_atoi.c \
 		ft_putnbr_fd.c \
 		ft_split.c \
 		ft_striteri.c \
-		ft_strmapi.c 
+		ft_strmapi.c \
+		ft_lstnew.c \
+		ft_lstadd_front.c \
+		ft_lstsize.c \
+		ft_lstlast.c \
+		ft_lstadd_back.c \
+		ft_lstdelone.c \
+		ft_lstclear.c \
+		ft_lstiter.c \
+		ft_lstmap.c \
 		
 GNL = get_next_line_utils.c \
 	get_next_line.c 

@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:38:22 by chhoflac          #+#    #+#             */
-/*   Updated: 2024/01/31 14:25:05 by chhoflac         ###   ########.fr       */
+/*   Updated: 2024/02/09 11:03:59 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@
 # include <limits.h>
 # include <unistd.h>
 # include <stdarg.h> 
+
+typedef struct s_list
+{
+	void	*content;
+	struct	s_list	*next;
+}	t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -80,5 +86,6 @@ int		ft_hexa_low(unsigned int n);
 void	ft_push_left(char *cont);
 int		ft_old_line(char **line, size_t nbchar);
 int		ft_fill(char *buff, char **line, size_t nbchar);
+
 
 #endif
