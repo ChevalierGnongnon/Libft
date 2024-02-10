@@ -86,6 +86,6 @@ int		ft_hexa_low(unsigned int n);
 void	ft_push_left(char *cont);
 int		ft_old_line(char **line, size_t nbchar);
 int		ft_fill(char *buff, char **line, size_t nbchar);
-
+t_list  *ft_lstnew(void *content);
 
 #endif
