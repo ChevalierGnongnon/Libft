@@ -87,4 +87,7 @@ fclean : clean
 
 re : fclean all
 
+main : all
+	cc -Werror -Wextra -Wall ft_lstnew.c
+
 .PHONY : all clean fclean re
