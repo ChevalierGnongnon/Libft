@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: chhoflac <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/12 11:54:01 by chhoflac          #+#    #+#             */
+/*   Updated: 2024/02/12 11:54:12 by chhoflac         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void    ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-    if (lst && new)
-    {
-        new -> next = *lst;
-        *lst = new;
-    }
+	if (lst && new)
+	{
+		new -> next = *lst;
+		*lst = new;
+	}
 }
