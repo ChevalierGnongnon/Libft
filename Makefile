@@ -31,11 +31,23 @@ LIBFT = ft_atoi.c \
 		ft_strtrim.c \
 		ft_substr.c \
 		ft_tolower.c \
-		ft_toupper.c 
+		ft_toupper.c
+
+BONUS = ft_lstadd_back.c \
+		ft_lstadd_front.c \
+		ft_lstclear.c \
+		ft_lstdelone.c \
+		ft_lstiter.c \
+		ft_lstlast.c \
+		ft_lstmap.c \
+		ft_lstnew.c \
+		ft_lstsize.c
 
 CC = cc
 
 OBJSLIBFT = $(LIBFT:.c=.o)
+
+OBJSBONUS = $(BONUS:.c=.o)
 
 CFLAGS = -Werror -Wextra -Wall
 
@@ -51,12 +63,16 @@ all : $(NAME)
 $(NAME) : $(OBJSLIBFT)
 		ar rcs $(NAME) $(OBJSLIBFT)
 
+bonus : $(OBJSLIBFT) $(OBJSBONUS)
+		ar rcs $(NAME) $(OBJSLIBFT) $(OBJSBONUS)
+		
 clean : 
-	$(RM) $(OBJSLIBFT) 
+	$(RM) $(OBJSLIBFT)
+	$(RM) $(OBJSBONUS)
 
 fclean : clean
 	$(RM) $(NAME)
 
 re : fclean all
 
-.PHONY : all clean fclean re
+.PHONY : all bonus clean fclean re
